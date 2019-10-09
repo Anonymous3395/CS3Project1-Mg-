@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<title>Home</title>
+<link rel="shortcut icon" href="../images/Questions.jpg" />
+<link rel="stylesheet" type="text/css" href="../css/Home.css"/>
+<meta charset="UTF-8" />
+<a name="top"></a>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body> 
+<div class="navbar">
+  <a href="../htdocs/Home.html">Home</a>
+  <a href="../htdocs/Test.html">Test</a>
+  <div class="dropdown">
+    <button class="dropbtn">Others
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="../htdocs/Forums.html">Forums</a>
+      <a href="../htdocs/Games.html">Games to Play</a>
+    </div>
+  </div> 
+  </div>
+
+<header>
+<div class="slideshow-container">
+
+<div class="mySlides fade">     
+  <div class="numbertext">1 / 3</div>
+  <img src="../images/Question.jpg" style="width:100%">
+  <div class="text"><h1>Depression</h1>This major depressive disorder is a common and serious medical illness that negatively affects how you feel, the way you think and how you act.<br><br> Depression causes feelings of sadness and/or a loss of interest in activities once enjoyed. <br><br>It can lead to a variety of emotional and physical problems and can decrease a person’s ability to function at work and at home. </div>
+</div>
+  
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="../images/Test.jpg" style="width:100%">
+  <div class="text"><h4> If you have been feeling down or in the dumps for a long time, </h4>You may visit our link below.<br><br> <a href="../htdocs/Test.html"> Test for Depression </a>
+  </div>
+</div>
+  
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="../images/Others.jpg" style="width:100%">
+  <div class="text"><h3> If you are feeling depressed, head over to the following links below: </h3>
+    <a href="../htdocs/Forums.html">Forums</a><br><br>
+    <a href="../htdocs/Games.html">Games</a><br><br>Maybe what you will find here will help you feel better!</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</header>
+<footer>
+  <p> Please call emergency services if you or anyone is in danger.<br> 0917-899-USAP (8727) 0917-989-8727 </p>
+<h3> Sources </h3>
+      <a href="https://www.psycom.net/depression-test/">1. https://www.psycom.net/depression-test/</a> <br><br>
+      <a href="https://www.elsetge.cat/pngvi/hToJbo_question-mark-wallpaper-blue/">2. https://www.elsetge.cat/pngvi/hToJbo_question-mark-wallpaper-blue/</a> <br><br>
+      <a href="https://www.psychiatry.org/patients-families/depression/what-is-depression">3. https://www.psychiatry.org/patients-families/depression/what-is-depression</a> <br><br>
+	  <a href="https://www.pinterest.ph/pin/702913454313626301/">4. https://www.pinterest.ph/pin/702913454313626301/</a> <br><br>
+    
+</footer>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
